@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Usuario} from "./usuario.model";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SysmicProject';
+
+  titulo="Lista De Usuarios";
+
+  usuarios:Usuario[]=[
+
+    new Usuario("Fernando", "Rojas", "Patron", 23),
+    new Usuario("Antonio", "Gordon", "Comisionado", 28)
+
+  ];
+
+
 }

@@ -1,2 +1,29 @@
-<app-login></app-login>
+<div class="container">
+  <div class="col">
+    <h1>{{titulo}}</h1>
+  </div>
+
+  <br><br>
+
+  <form class="form-control row">
+    <div class="form-control col-2">
+
+    </div>
+  </form>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let usuario of usuarios; let i=index">
+        {{i+1}}-
+        {{usuario.nombre}}
+        {{usuario.apellido}}
+        {{usuario.rol}}
+        {{usuario.edad}}
+      </div>
+    </div>
+  </div>
+</div>
 
