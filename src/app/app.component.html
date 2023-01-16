@@ -1,29 +1,15 @@
-<div class="container">
-  <div class="col">
-    <h1>{{titulo}}</h1>
-  </div>
-
-  <br><br>
-
-  <form class="form-control row">
-    <div class="form-control col-2">
-
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
-  </form>
-
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let usuario of usuarios; let i=index">
-        {{i+1}}-
-        {{usuario.nombre}}
-        {{usuario.apellido}}
-        {{usuario.rol}}
-        {{usuario.edad}}
-      </div>
-    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="">Home</a></li>
+      <li><a href="/publicaciones">PUBLICACIONES</a></li>
+      <li><a href="/contato">CONTACTO</a></li>
+      <li><a href="/playlist">PLAYLIST</a></li>
+    </ul>
   </div>
-</div>
+</nav>
 
+<router-outlet></router-outlet> <!-- Este se encarga de GESTIONAR todo el enrutamiento desde la raiz principal :D -->
