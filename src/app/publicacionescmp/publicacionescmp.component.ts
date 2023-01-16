@@ -15,7 +15,7 @@ export class PublicacionescmpComponent implements OnInit {
 
   redirect(){
     //El objeto esta vacio porque nos dirigimos al HOME (el cual no tiene enlace en el HTML)
-    this.router.navigate([""]);
+    this.router.navigate(["menu"]);
   }
 
 

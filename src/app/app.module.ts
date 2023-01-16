@@ -11,6 +11,7 @@ import {HomecmpComponent} from "./homecmp/homecmp.component";
 import {PublicacionescmpComponent} from "./publicacionescmp/publicacionescmp.component";
 import {PlaylistcmpComponent} from "./playlistcmp/playlistcmp.component";
 import {RouterModule, Routes} from "@angular/router";
+import { MenucmpComponent } from './menu/menu.component';
 
 const appRoutes:Routes=[
 
@@ -18,6 +19,7 @@ const appRoutes:Routes=[
   {path:'contacto', component:ContactocmpComponent},
   {path:'playlist', component:PlaylistcmpComponent},
   {path:'publicaciones', component:PublicacionescmpComponent},
+  {path:'menu', component:MenucmpComponent},
 
 ]; // crear la variable donde almacenaremos las rutas :D (ROUTING)
 
@@ -30,7 +32,8 @@ const appRoutes:Routes=[
     ContactocmpComponent,
     HomecmpComponent,
     PublicacionescmpComponent,
-    PlaylistcmpComponent
+    PlaylistcmpComponent,
+    MenucmpComponent
   ],
   imports: [
     BrowserModule,
