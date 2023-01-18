@@ -14,6 +14,11 @@ import {RouterModule, Routes} from "@angular/router";
 import { MenucmpComponent } from './menu/menu.component';
 import {ServicioUsuarioService} from "./servicio-usuario.service";
 import {UsuarioService} from "./usuario.service";
+import { IniciosesionComponent } from './iniciosesion/iniciosesion.component';
+import { CrearcuentaComponent } from './crearcuenta/crearcuenta.component';
+import { EditarperfilComponent } from './editarperfil/editarperfil.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { ChatComponent } from './chat/chat.component';
 
 const appRoutes:Routes=[
 
@@ -22,6 +27,9 @@ const appRoutes:Routes=[
   {path:'playlist', component:PlaylistcmpComponent},
   {path:'publicaciones', component:PublicacionescmpComponent},
   {path:'menu', component:MenucmpComponent},
+  {path:'iniciosesion', component:IniciosesionComponent},
+  {path:'crearcuenta', component:CrearcuentaComponent},
+  {path:'inicio', component:InicioComponent},
 
 ]; // crear la variable donde almacenaremos las rutas :D (ROUTING)
 
@@ -35,7 +43,12 @@ const appRoutes:Routes=[
     HomecmpComponent,
     PublicacionescmpComponent,
     PlaylistcmpComponent,
-    MenucmpComponent
+    MenucmpComponent,
+    IniciosesionComponent,
+    CrearcuentaComponent,
+    EditarperfilComponent,
+    InicioComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

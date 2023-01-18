@@ -1,0 +1,167 @@
+/*
+==================
+==================
+Global
+==================
+==================
+*/
+
+/* Reset */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --c-bg: #E8EAF6; /* Background. */
+  --c-txt: #9FA8DA; /* Font. */
+  --c-i: #7E57C2; /* Icon. */
+  --c-btn: #FFF176; /* Button. */
+}
+
+/* Document */
+html {
+  margin: 0;
+  padding: 6px; /* [!] Security margin. */
+}
+
+html:before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 6px; /* [!] Security margin. */
+  border: 3px solid var(--c-i); /* [!] Security margin. */
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  background: var(--c-bg);
+  color: var(--c-txt);
+}
+
+/* Title */
+h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 3.25rem;
+  font-weight: 100;
+  letter-spacing: .2rem;
+}
+
+
+/*
+==================
+==================
+Nav
+==================
+==================
+*/
+
+/* Nav container */
+.main-nav {
+  display: flex;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+  /* Size reference */
+  font-size: 1rem;
+}
+
+.nav-part {
+  display: flex;
+  margin-left: .5rem;
+  background: #FFFFFF;
+  border-radius: 3.4em;
+}
+
+/* Nav buttons */
+.nav-buttons {
+  display: flex;
+  margin: 0;
+  padding: .2em;
+  background: #FFFFFF;
+  border-radius: 3.4em;
+  -webkit-box-shadow: 0 .1em .3em rgba(0,0,0,.1);
+  box-shadow: 0 .1em .3em rgba(0,0,0,.1);
+  /*z-index: 1;*/
+}
+
+.nav-buttons li {
+  margin: .2em;
+  list-style: none;
+}
+
+.nav-buttons li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.6em;
+  height: 2.6em;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.nav-buttons li a:hover {
+  background: var(--c-btn);
+  -webkit-box-shadow: 0 .1em .3em rgba(0,0,0,.25);
+  box-shadow: 0 .1em .3em rgba(0,0,0,.25);
+}
+
+.nav-buttons li a:active {
+  -webkit-transform: scale(.95);
+  transform: scale(.95);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Icons */
+.nav-icon {
+  fill: var(--c-i);
+}
+
+.nav-buttons li a:hover .nav-icon {
+  fill: #FFFFFF;
+}
+
+/* Nav info */
+.nav-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Hidden by default */
+  width: 0;
+  opacity: 0;
+  transition:
+    width .2s ease-in-out 0s,
+    opacity .2s ease-in-out 0s;
+}
+
+.nav-info > span {
+  padding: .2em .8em;
+  pointer-events: none;
+  -webkit-transform: translateX(.725rem);
+  transform: translateX(.725rem);
+  transition: transform 1.2s ease;
+  pointer-events: none;
+}
+
+/* Desktop */
+@media screen and (min-width:920px){
+  .nav-part {
+    bottom: auto;
+    top: 1em;
+    right: 1em;
+  }
+}
