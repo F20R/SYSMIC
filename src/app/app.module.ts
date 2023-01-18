@@ -12,6 +12,8 @@ import {PublicacionescmpComponent} from "./publicacionescmp/publicacionescmp.com
 import {PlaylistcmpComponent} from "./playlistcmp/playlistcmp.component";
 import {RouterModule, Routes} from "@angular/router";
 import { MenucmpComponent } from './menu/menu.component';
+import {ServicioUsuarioService} from "./servicio-usuario.service";
+import {UsuarioService} from "./usuario.service";
 
 const appRoutes:Routes=[
 
@@ -41,7 +43,7 @@ const appRoutes:Routes=[
     //AÑADIR ESTO ES FUNDAMENTAÑ PARA INYECTAR LOS METODOS DE ROUTEADO | forRoot <- PARA USAR RUTAS (const NAME)
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ServicioUsuarioService, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Usuario} from "../usuario.model";
+import {ServicioUsuarioService} from "../servicio-usuario.service";
+import {UsuarioService} from "../usuario.service";
 
 @Component({
   selector: 'app-homecmp',
@@ -12,9 +14,12 @@ export class HomecmpComponent implements OnInit {
 
   titulo="Lista De Usuarios";
 
-  constructor() { }
+  constructor(private miServicio:ServicioUsuarioService, private usuarioService:UsuarioService) {
+    this.usuarios=usuarioService.usuarios;
+  }
 
   ngOnInit(): void {
+
   }
 
   usuarios:Usuario[]=[
@@ -26,11 +31,12 @@ export class HomecmpComponent implements OnInit {
 
   agregarUsuario(){
     let miUsuario= new Usuario(
+      //this.miServicio.muestramensaje("Nombre del usuario: " + miUsuario.nombre);
       this.cuadroNombre,
       this.cuadroApell,
       this.cuadroRol,
       this.cuadroEdad);
-    this.usuarios.push(miUsuario); // VENDRIA A SER EL RETURN DE JAVA (19)
+    this.usuarioService.agregarUS(miUsuario);
   }
 
   cuadroNombre:string="";
