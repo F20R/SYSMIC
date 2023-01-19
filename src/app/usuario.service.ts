@@ -12,4 +12,21 @@ export class UsuarioService{ //22
   agregarUS(usuario:Usuario){
     this.usuarios.push(usuario); // VENDRIA A SER EL RETURN DE JAVA (19)
   }
+
+  findUS(indice:number){
+    let usuario:Usuario=this.usuarios[indice] // 28
+    return usuario;
+  }
+
+  editarUS(indice:number, usuario:Usuario){
+    let usuarioeditado=this.usuarios[indice] // 28
+    usuarioeditado.nombre=usuario.nombre;
+    usuarioeditado.apellido=usuario.apellido;
+    usuarioeditado.rol=usuario.rol;
+    usuarioeditado.edad=usuario.edad;
+  }
+
+  borrarUS(indice:number){
+    this.usuarios.splice(indice,1);
+  }
 }

@@ -30,6 +30,7 @@ const appRoutes:Routes=[
   {path:'iniciosesion', component:IniciosesionComponent},
   {path:'crearcuenta', component:CrearcuentaComponent},
   {path:'inicio', component:InicioComponent},
+  {path:'perfil/:id', component:EditarperfilComponent},
 
 ]; // crear la variable donde almacenaremos las rutas :D (ROUTING)
 
