@@ -19,6 +19,7 @@ import { CrearcuentaComponent } from './crearcuenta/crearcuenta.component';
 import { EditarperfilComponent } from './editarperfil/editarperfil.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ChatComponent } from './chat/chat.component';
+import { Error404Component } from './error404/error404.component';
 
 const appRoutes:Routes=[
 
@@ -31,7 +32,8 @@ const appRoutes:Routes=[
   {path:'crearcuenta', component:CrearcuentaComponent},
   {path:'inicio', component:InicioComponent},
   {path:'perfil/:id', component:EditarperfilComponent},
-  //{path:'**', component:ErrorCMP},
+  {path:'chat', component:ChatComponent},
+  {path:'**', component:Error404Component},
 
 ]; // crear la variable donde almacenaremos las rutas :D (ROUTING)
 
@@ -50,7 +52,8 @@ const appRoutes:Routes=[
     CrearcuentaComponent,
     EditarperfilComponent,
     InicioComponent,
-    ChatComponent
+    ChatComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
