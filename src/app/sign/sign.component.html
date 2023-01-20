@@ -2,15 +2,22 @@
   <div class="row">
     <div class="col">
       <div> <!-- para mostrar datos en componente hijo-->
-        <a [routerLink]="['/perfil', indice]">
-        <!-- Si abajo te da error en las variables, es por el Nombre (usa los de .TS)-->
         {{indice+1}}-
         {{usuarioLista.nombre}}
         {{usuarioLista.apellido}}
         {{usuarioLista.rol}}
         {{usuarioLista.edad}}
+        <a [routerLink]="['/perfil', indice]" [queryParams]="{accion:'1'}">
+        <!-- Si abajo te da error en las variables, es por el Nombre (usa los de .TS)-->
+          Editar
+        </a>
+        &nbsp;
+        <a [routerLink]="['/perfil', indice]" [queryParams]="{accion:'2'}">
+          <!-- Si abajo te da error en las variables, es por el Nombre (usa los de .TS)-->
+          Borrar
         </a>
       </div>
+
 
       <app-signout (caracteristicasUsuarios)="agregarCaracteristica($event)"></app-signout>
       <!-- Llamar a la raiz padre (20) | DOCUMENTACION: https://angular.io/guide/inputs-outputs-->

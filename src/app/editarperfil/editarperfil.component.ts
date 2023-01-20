@@ -18,6 +18,7 @@ export class EditarperfilComponent implements OnInit {
   { }
 
   ngOnInit(): void {
+    this.accion =this.route.snapshot.queryParams['accion']; //30 LLAMAR A LA ACCION
     this.indice=this.route.snapshot.params["id"];
     let usuario:Usuario=this.usuarioService.findUS(this.indice);
     this.cuadroNombre=usuario.nombre;
@@ -36,7 +37,25 @@ export class EditarperfilComponent implements OnInit {
 
   usuarios:Usuario[]=[];
 
+  accion:number;
+
   editarUsuario(){ //28
+    if (this.accion==1){ //30
+      let miUsuario = new Usuario(
+        //this.miServicio.muestramensaje("Nombre del usuario: " + miUsuario.nombre);
+        this.cuadroNombre,
+        this.cuadroApell,
+        this.cuadroRol,
+        this.cuadroEdad);
+      this.usuarioService.editarUS(this.indice, miUsuario);
+      this.router.navigate([""]);//redireccionar a home despues de rellenar un FORM (26)
+    }else {//30
+      //si quiero que haga una segunda función
+      this.usuarioService.borrarUS(this.indice);
+      this.router.navigate([""]);
+    }
+  }
+  /*editarUsuario(){ //28
     let miUsuario= new Usuario(
       //this.miServicio.muestramensaje("Nombre del usuario: " + miUsuario.nombre);
       this.cuadroNombre,
@@ -51,6 +70,8 @@ export class EditarperfilComponent implements OnInit {
     this.usuarioService.borrarUS(this.indice);
     this.router.navigate([""]);//29
   }
+
+   */
 
   cuadroNombre:String="";
   cuadroApell:String="";
