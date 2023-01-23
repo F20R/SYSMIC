@@ -30,16 +30,16 @@
       <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
             <div>About</div>
           </span></a></li>
-      <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-            <div>Service</div>
+      <li class="menu-nav-item"><a class="menu-nav-link" *ngIf="!estaLogueado()" href="/rekening"><span>
+            <div>Login</div>
           </span></a></li>
-      <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-            <div>Team</div>
+      <li class="menu-nav-item"><a class="menu-nav-link" *ngIf="estaLogueado()" (click)="logout()"><span>
+            <div>Logout</div>
           </span></a></li>
     </ul>
     <div class="gallery">
       <div class="title">
-        <p>Sora Gallery</p>
+        <p>S Y S M I C</p>
       </div>
       <div class="images">
         <a class="image-link" href="#">
@@ -59,5 +59,8 @@
   </div>
 </div>
 
+
+
+<app-bard></app-bard>
 
 <router-outlet></router-outlet> <!-- Este se encarga de GESTIONAR todo el enrutamiento desde la raiz principal :D -->

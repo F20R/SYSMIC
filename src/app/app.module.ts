@@ -20,19 +20,28 @@ import { EditarperfilComponent } from './editarperfil/editarperfil.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ChatComponent } from './chat/chat.component';
 import { Error404Component } from './error404/error404.component';
+import {DataServices} from "./data.services";
+import {HttpClientModule} from "@angular/common/http";
+import { BardComponent } from './bard/bard.component';
+import { RekeningComponent } from './rekening/rekening.component';
+import {RekeningService} from "./rekening/rekening.service";
+import {CookieService} from "ngx-cookie-service";
+import {Schild} from "./rekening/schild"; //44
 
 const appRoutes:Routes=[
 
   {path:'', component:HomecmpComponent},
   {path:'contacto', component:ContactocmpComponent},
   {path:'playlist', component:PlaylistcmpComponent},
-  {path:'publicaciones', component:PublicacionescmpComponent},
+  {path:'publicaciones', component:PublicacionescmpComponent, canActivate:[Schild]},
   {path:'menu', component:MenucmpComponent},
   {path:'iniciosesion', component:IniciosesionComponent},
   {path:'crearcuenta', component:CrearcuentaComponent},
   {path:'inicio', component:InicioComponent},
   {path:'perfil/:id', component:EditarperfilComponent},
   {path:'chat', component:ChatComponent},
+  {path:'bard', component:BardComponent, canActivate:[Schild]},
+  {path:'rekening', component:RekeningComponent},
   {path:'**', component:Error404Component},
 
 ]; // crear la variable donde almacenaremos las rutas :D (ROUTING)
@@ -53,15 +62,19 @@ const appRoutes:Routes=[
     EditarperfilComponent,
     InicioComponent,
     ChatComponent,
-    Error404Component
+    Error404Component,
+    BardComponent,
+    RekeningComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     //AÑADIR ESTO ES FUNDAMENTAÑ PARA INYECTAR LOS METODOS DE ROUTEADO | forRoot <- PARA USAR RUTAS (const NAME)
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    //Importar Modulo para el firebase
+    HttpClientModule,
   ],
-  providers: [ServicioUsuarioService, UsuarioService],
+  providers: [ServicioUsuarioService, UsuarioService, DataServices, RekeningService, CookieService, Schild],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

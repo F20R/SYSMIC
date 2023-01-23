@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Usuario} from "../usuario.model";
 import {ServicioUsuarioService} from "../servicio-usuario.service";
 import {UsuarioService} from "../usuario.service";
+import {DataServices} from "../data.services";
 
 @Component({
   selector: 'app-homecmp',
@@ -15,19 +16,19 @@ export class HomecmpComponent implements OnInit {
   titulo="Lista De Usuarios";
 
   constructor(private miServicio:ServicioUsuarioService, private usuarioService:UsuarioService) {
-    this.usuarios=usuarioService.usuarios;
-  }
+    //this.usuarios=usuarioService.usuarios;
 
+
+  }
   ngOnInit(): void {
-
+  this.usuarioService.obtenerUsuarios().subscribe(misUsuarios=>{
+    console.log(misUsuarios);
+    this.usuarios=Object.values(misUsuarios);//35
+    this.usuarioService.setUsuarios(this.usuarios);//35
+  }); //34
   }
 
-  usuarios:Usuario[]=[
-
-    new Usuario("Fernando", "Rojas", "Patron", 23),
-    new Usuario("Antonio", "Gordon", "Comisionado", 28)
-
-  ];
+  usuarios:Usuario[]=[];
 
   agregarUsuario(){
     let miUsuario= new Usuario(
