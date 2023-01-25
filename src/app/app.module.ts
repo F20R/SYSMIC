@@ -21,6 +21,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ChatComponent } from './chat/chat.component';
 import {Registro1Component} from "./registro1/registro1.component";
 import {Login2Component} from "./login2/login2.component";
+import { Registro2Component } from './registro2/registro2.component';
 
 const appRoutes:Routes=[
 
@@ -53,7 +54,8 @@ const appRoutes:Routes=[
     InicioComponent,
     ChatComponent,
     Registro1Component,
-    Login2Component
+    Login2Component,
+    Registro2Component
   ],
   imports: [
     BrowserModule,
