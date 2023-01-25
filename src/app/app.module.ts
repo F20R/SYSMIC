@@ -30,14 +30,15 @@ import {Schild} from "./rekening/schild"; //44
 
 const appRoutes:Routes=[
 
-  {path:'', component:HomecmpComponent},
+  {path:'', component:InicioComponent},
   {path:'contacto', component:ContactocmpComponent},
   {path:'playlist', component:PlaylistcmpComponent},
   {path:'publicaciones', component:PublicacionescmpComponent, canActivate:[Schild]},
   {path:'menu', component:MenucmpComponent},
   {path:'iniciosesion', component:IniciosesionComponent},
   {path:'crearcuenta', component:CrearcuentaComponent},
-  {path:'inicio', component:InicioComponent},
+  {path:'sign', component:SignComponent},
+  {path:'signout', component:SignoutComponent},
   {path:'perfil/:id', component:EditarperfilComponent},
   {path:'chat', component:ChatComponent},
   {path:'bard', component:BardComponent, canActivate:[Schild]},

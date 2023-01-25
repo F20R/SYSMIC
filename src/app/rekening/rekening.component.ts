@@ -9,6 +9,8 @@ import {RekeningService} from "./rekening.service";
 })
 export class RekeningComponent implements OnInit {
 
+  url="sysmic.ico"
+
   constructor(private rekeningService:RekeningService) { }
 
   ngOnInit(): void {
