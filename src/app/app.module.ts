@@ -26,7 +26,8 @@ import { BardComponent } from './bard/bard.component';
 import { RekeningComponent } from './rekening/rekening.component';
 import {RekeningService} from "./rekening/rekening.service";
 import {CookieService} from "ngx-cookie-service";
-import {Schild} from "./rekening/schild"; //44
+import {Schild} from "./rekening/schild";
+import { SecondComponent } from './second/second.component'; //44
 
 const appRoutes:Routes=[
 
@@ -65,7 +66,8 @@ const appRoutes:Routes=[
     ChatComponent,
     Error404Component,
     BardComponent,
-    RekeningComponent
+    RekeningComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
