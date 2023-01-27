@@ -7,12 +7,12 @@
 
 .menu {
   padding: 2rem;
-  background-color: #fff;
+  background-color: #f0f3f4;
   position: relative;
   width: calc(410px + 4rem);
   display: flex;
-  top: 800px;
-  left: 710px;
+  top: 720px;
+  left: -223px;
   justify-content: center;
   border-radius: 20px 20px;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.075);

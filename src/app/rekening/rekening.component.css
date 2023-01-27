@@ -13,6 +13,11 @@ body{
   height: calc(100% - 73px);
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #f0f3f4;
+  opacity: 0.5; /* Firefox */
+}
+
 footer{
 
   background-color: #0c0f15;

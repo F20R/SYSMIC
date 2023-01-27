@@ -48,7 +48,7 @@ p {
   --burger-menu-radius: 0em;
   position: fixed;
   top: 5vh;
-  left: 49vw;
+  left: 938px;
   z-index: 100;
   display: block;
   width: var(--burger-menu-radius);
@@ -58,7 +58,7 @@ p {
 }
 .burger-menu .line {
   position: absolute;
-  left: 25%;
+  left: 45%;
   width: 50%;
   height: 3px;
   background: hsla(210deg, 29%, 24%, 0.3);
@@ -104,7 +104,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1a1e23;
+  background: #150432;
   opacity: 0;
   overflow-x: hidden;
   visibility: hidden;

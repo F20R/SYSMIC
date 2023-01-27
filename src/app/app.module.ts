@@ -27,7 +27,8 @@ import { RekeningComponent } from './rekening/rekening.component';
 import {RekeningService} from "./rekening/rekening.service";
 import {CookieService} from "ngx-cookie-service";
 import {Schild} from "./rekening/schild";
-import { SecondComponent } from './second/second.component'; //44
+import { SecondComponent } from './second/second.component';
+import { BinicioComponent } from './binicio/binicio.component'; //44
 
 const appRoutes:Routes=[
 
@@ -67,7 +68,8 @@ const appRoutes:Routes=[
     Error404Component,
     BardComponent,
     RekeningComponent,
-    SecondComponent
+    SecondComponent,
+    BinicioComponent
   ],
   imports: [
     BrowserModule,
