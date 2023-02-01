@@ -16,7 +16,7 @@ export class HomecmpComponent implements OnInit {
   titulo="Lista De Usuarios";
 
   constructor(private miServicio:ServicioUsuarioService, private usuarioService:UsuarioService) {
-    //this.usuarios=usuarioService.usuarios;
+    this.usuarios=usuarioService.usuarios;
 
 
   }

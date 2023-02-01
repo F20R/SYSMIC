@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { SignComponent } from './sign/sign.component';
 import {FormsModule} from "@angular/forms";
 import {SignoutComponent} from "./signout/signout.component";
@@ -42,7 +41,7 @@ const appRoutes:Routes=[
   {path:'sign', component:SignComponent},
   {path:'signout', component:SignoutComponent},
   {path:'perfil/:id', component:EditarperfilComponent},
-  {path:'chat', component:ChatComponent},
+  {path:'chat', component:HomecmpComponent},
   {path:'bard', component:BardComponent, canActivate:[Schild]},
   {path:'rekening', component:RekeningComponent},
   {path:'**', component:Error404Component},
@@ -52,7 +51,6 @@ const appRoutes:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     SignComponent,
     SignoutComponent,
     ContactocmpComponent,
