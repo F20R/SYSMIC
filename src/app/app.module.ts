@@ -41,7 +41,7 @@ const appRoutes:Routes=[
   {path:'sign', component:SignComponent},
   {path:'signout', component:SignoutComponent},
   {path:'perfil/:id', component:EditarperfilComponent},
-  {path:'chat', component:HomecmpComponent},
+  {path:'chat', component:ChatComponent},
   {path:'bard', component:BardComponent, canActivate:[Schild]},
   {path:'rekening', component:RekeningComponent},
   {path:'**', component:Error404Component},

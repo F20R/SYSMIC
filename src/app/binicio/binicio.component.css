@@ -77,11 +77,11 @@
   position: absolute;
   top: 0.45rem;
   left: 0.45rem;
-  background: #089f8a;
+  background:transparent;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 0.7em;
-  color: white;
+  font-size: 1em;
+  color: #f0f3f4;
   padding: 0.5em;
 }
 .card-title {
@@ -98,7 +98,7 @@
 
 }
 .card.form:before {
-  background: linear-gradient(60deg, #c81db0 ,  #612bd1 ,  #0b043f , #510494 , #660474 , #660474 , #2b046d);
+  background: #2acc80;
 }
 .card.form:after {
   position: absolute;
@@ -117,7 +117,7 @@
   font-weight: 900;
   z-index: 5;
   text-transform: uppercase;
-  background: linear-gradient(60deg, #c81db0 ,  #612bd1 ,  #0b043f , #510494 , #660474 , #660474 , #2b046d);
+  background: #2acc80;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -132,16 +132,16 @@
   filter: blur(10px);
   transition: all 0.25s ease;
   z-index: 2;
-  background: linear-gradient(60deg, #c81db0 ,  #612bd1 ,  #0b043f , #510494 , #660474 , #660474 , #2b046d);
+  background: #2acc80;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   transform: translateX(-50%) translateY(-50%);
 }
 .card:nth-child(2) .card-label {
-  background: #ef4e7b;
+  background: #2acc80;
 }
 .card:nth-child(3) .card-label {
-  background: #1098ad;
+  background: #2acc80;
 }
 .card:hover {
   transform: scale(1.05);

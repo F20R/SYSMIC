@@ -104,7 +104,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #150432;
+  background-image: url(src/assets/images/menu_inicio.jpg);
+  background-size: cover;
   opacity: 0;
   overflow-x: hidden;
   visibility: hidden;
@@ -133,6 +134,8 @@ p {
 }
 .menu-nav-link {
   position: relative;
+  margin-top: -120px;
+  margin-left: 10px;
   display: inline-flex;
   font-size: 2rem;
   color: white;
@@ -180,22 +183,14 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 750px) {
-  .menu .images {
-    justify-content: center;
-  }
-}
+
+
 .menu .images .image-link {
   width: 15vw;
   margin: 0 12px;
   overflow: hidden;
 }
-@media screen and (max-width: 750px) {
-  .menu .images .image-link {
-    width: 40vw;
-    margin: 0 12px 12px 0;
-  }
-}
+
 .menu .images .image-link .image {
   position: relative;
   transition: 0.6s;
@@ -226,6 +221,4 @@ p {
   height: 250px;
   transform: translateY(102%);
 }
-
-/*# sourceMappingURL=angular.css.map */
 
