@@ -27,7 +27,9 @@ import {RekeningService} from "./rekening/rekening.service";
 import {CookieService} from "ngx-cookie-service";
 import {Schild} from "./rekening/schild";
 import { SecondComponent } from './second/second.component';
-import { BinicioComponent } from './binicio/binicio.component'; //44
+import { BinicioComponent } from './binicio/binicio.component';
+import { GaleriaComponent } from './galeria/galeria.component';
+import { FriendsComponent } from './friends/friends.component'; //44
 
 const appRoutes:Routes=[
 
@@ -42,8 +44,10 @@ const appRoutes:Routes=[
   {path:'signout', component:SignoutComponent},
   {path:'perfil/:id', component:EditarperfilComponent},
   {path:'chat', component:ChatComponent},
-  {path:'bard', component:BardComponent, canActivate:[Schild]},
+  {path:'galeria', component:GaleriaComponent},
+  {path:'bard', component:BardComponent},
   {path:'rekening', component:RekeningComponent},
+  {path:'friends', component:FriendsComponent},
   {path:'**', component:Error404Component},
 
 ]; // crear la variable donde almacenaremos las rutas :D (ROUTING)
@@ -67,7 +71,9 @@ const appRoutes:Routes=[
     BardComponent,
     RekeningComponent,
     SecondComponent,
-    BinicioComponent
+    BinicioComponent,
+    GaleriaComponent,
+    FriendsComponent
   ],
   imports: [
     BrowserModule,

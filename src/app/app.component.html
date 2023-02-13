@@ -1,11 +1,12 @@
 <input type="checkbox" id="burger-toggle">
-<label for="burger-toggle" class="burger-menu">
+<label for="burger-toggle" class="burger-menu" style="margin-left: -35px">
   <img src="../assets/images/logicono.png"/>
   <div class="line"></div>
   <div class="line"></div>
   <div class="line"></div>
   <app-bard></app-bard>
 </label>
+
 <div class="menu">
   <div class="menu-inner">
     <ul class="menu-nav">
@@ -14,7 +15,7 @@
           </span></a></li>
 
       <li class="menu-nav-item"><a class="menu-nav-link" href="#"><span>
-            <div><img src="../assets/images/home_logo.png"/></div>
+            <div style="margin-left: 15px"><img src="../assets/images/home_logo.png"/></div>
           </span></a></li>
 
       <li class="menu-nav-item"><a class="menu-nav-link" *ngIf="estaLogueado()" (click)="logout()"><span>

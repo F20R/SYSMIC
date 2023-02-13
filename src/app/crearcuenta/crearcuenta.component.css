@@ -40,6 +40,7 @@ body{
   text-align: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  margin-right: -60px;
 }
 
 .form-content h3 {
@@ -47,7 +48,7 @@ body{
   text-align: center;
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .form-content h3.form-title {
@@ -57,7 +58,7 @@ body{
 .form-content p {
   color: #f0f3f4;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   line-height: 20px;
   margin-bottom: 30px;
@@ -77,12 +78,13 @@ body{
   outline: 0;
   border-radius: 6px;
   background-color: transparent;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 300;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-top: 16px;
-  margin-left: 84px;
+  margin-left: 85px;
+
 }
 
 .btn-primary{
@@ -131,6 +133,7 @@ body{
 .mv-up{
   margin-top: -9px !important;
   margin-bottom: 8px !important;
+
 }
 
 .invalid-feedback{

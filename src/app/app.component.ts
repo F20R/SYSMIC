@@ -26,4 +26,5 @@ export class AppComponent implements OnInit{
   logout(){ //43
     this.rekeningService.logout();
   }
+
 }

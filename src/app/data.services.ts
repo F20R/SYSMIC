@@ -9,8 +9,7 @@ export class DataServices{
   }
 
   cargarUsuarios(){
-    const token=this.rekeningService.getIdToken();
-    return this.httpClient.get("https://usuariosysmic-default-rtdb.europe-west1.firebasedatabase.app/datos.json?auth=" + token);
+    return this.httpClient.get("https://127.0.0.1:8000/api/user");
   }
   guardarUsuarios(usuarios:Usuario[]){
 
